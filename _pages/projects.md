@@ -3,70 +3,71 @@ permalink: /projects/
 title: "Projects"
 ---
 
-Below are my pinned GitHub repositories.
-
 <style>
-.proj-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-.proj-table th, .proj-table td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
-.proj-table th { text-align: left; font-weight: 600; color: #374151; }
-.proj-repo { font-weight: 600; color: #0366d6; text-decoration: none; }
-.proj-repo:hover { text-decoration: underline; }
-.proj-desc { color: #6b7280; font-size: 0.95em; }
-.proj-meta { color: #6b7280; font-size: 0.9em; display: flex; gap: 10px; align-items: center; }
-.lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; background: #9ca3af; }
-@media (max-width: 720px) {
-  .hide-sm { display: none; }
+.pinned-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.pin-card { border: 1px solid #1f2937; border-radius: 12px; padding: 14px; background: #0d1117; color: #e5e7eb; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02); min-height: 150px; display: flex; flex-direction: column; }
+.pin-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.pin-title { display: flex; gap: 8px; align-items: center; }
+.pin-title a { color: #58a6ff; font-weight: 600; text-decoration: none; }
+.pin-title a:hover { text-decoration: underline; }
+.badge { border: 1px solid rgba(229,231,235,0.2); border-radius: 999px; padding: 1px 8px; font-size: 12px; color: #9ca3af; }
+.pin-desc { flex: 1; font-size: 14px; color: #9ca3af; margin-bottom: 12px; }
+.pin-meta { display: flex; gap: 14px; font-size: 12px; color: #9ca3af; }
+.lang-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; background: #9ca3af; }
+@media (prefers-color-scheme: light) {
+  .pin-card { background: #fff; color: #111827; border-color: #e5e7eb; }
+  .pin-title a { color: #0366d6; }
+  .badge { color: #6b7280; border-color: #d1d5db; }
+  .pin-desc { color: #4b5563; }
+  .pin-meta { color: #6b7280; }
 }
 </style>
 
-<table class="proj-table">
-  <thead>
-    <tr>
-      <th>Repository</th>
-      <th>Description</th>
-      <th class="hide-sm">Language</th>
-      <th>Stars</th>
-      <th class="hide-sm">Forks</th>
-      <th class="hide-sm">Updated</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for repo in site.data.pinned.repos %}
-    {% assign parts = repo | split: '/' %}
-    {% assign owner = parts[0] %}
-    {% assign name = parts[1] %}
-    <tr data-repo="{{ repo }}">
-      <td><a class="proj-repo" href="https://github.com/{{ repo }}" target="_blank" rel="noopener">{{ owner }}/<strong>{{ name }}</strong></a></td>
-      <td class="proj-desc" data-desc>Loading description…</td>
-      <td class="hide-sm" data-language></td>
-      <td data-stars>--</td>
-      <td class="hide-sm" data-forks>--</td>
-      <td class="hide-sm" data-updated>--</td>
-    </tr>
-  {% endfor %}
-  </tbody>
-</table>
+<div class="pinned-grid">
+{% for repo in site.data.pinned.repos %}
+  {% assign parts = repo | split: '/' %}
+  {% assign owner = parts[0] %}
+  {% assign name = parts[1] %}
+  <a class="pin-card" href="https://github.com/{{ repo }}" target="_blank" rel="noopener" data-repo="{{ repo }}">
+    <div class="pin-head">
+      <div class="pin-title">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h7A2.5 2.5 0 0 1 14 2.5v11a.5.5 0 0 1-.757.429L8 10.101l-5.243 3.828A.5.5 0 0 1 2 13.5z"></path></svg>
+        <span>{{ owner }}/<strong>{{ name }}</strong></span>
+      </div>
+      <span class="badge">Public</span>
+    </div>
+    <div class="pin-desc" data-desc>Loading description…</div>
+    <div class="pin-meta">
+      <span class="meta-lang" data-language><span class="lang-dot"></span></span>
+      <span data-stars>★ --</span>
+      <span data-forks>⑂ --</span>
+      <span class="hide-sm" data-updated></span>
+    </div>
+  </a>
+{% endfor %}
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', async () => {
-    const rows = document.querySelectorAll('tr[data-repo]');
-    for (const row of rows) {
-      const repo = row.getAttribute('data-repo');
+    const cards = document.querySelectorAll('.pin-card');
+    for (const card of cards) {
+      const repo = card.getAttribute('data-repo');
       try {
         const res = await fetch(`https://api.github.com/repos/${repo}`);
         if (!res.ok) continue;
         const d = await res.json();
-        const desc = row.querySelector('[data-desc]');
-        const lang = row.querySelector('[data-language]');
-        const stars = row.querySelector('[data-stars]');
-        const forks = row.querySelector('[data-forks]');
-        const updated = row.querySelector('[data-updated]');
+        const desc = card.querySelector('[data-desc]');
+        const lang = card.querySelector('[data-language]');
+        const stars = card.querySelector('[data-stars]');
+        const forks = card.querySelector('[data-forks]');
+        const updated = card.querySelector('[data-updated]');
         if (desc) desc.textContent = d.description || 'No description provided.';
-        if (lang && d.language) lang.textContent = d.language;
+        if (lang && d.language) lang.innerHTML = `<span class="lang-dot"></span>${d.language}`;
         if (stars) stars.textContent = `★ ${d.stargazers_count}`;
         if (forks) forks.textContent = `⑂ ${d.forks_count}`;
         if (updated && d.updated_at) updated.textContent = new Date(d.updated_at).toLocaleDateString();
       } catch (_) {}
     }
   });
+</script>
 <\/script>
