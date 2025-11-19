@@ -18,6 +18,6 @@ In addition to AI, I have experience with Java, PHP, Python, C++, and JavaScript
 - Nationality: Burmese (Myanmar)
 - Phone: (+95) 9420053538 | Viber: 09420053538
 - Email: pltlosgot@gmail.com
-- Website: https://pyaelinn01.github.io/Portfolio/
-- Facebook: https://www.facebook.com/profile.php?id=100049110682203
+- Website: [pyaelinn01.github.io/Portfolio](https://pyaelinn01.github.io/Portfolio/)
+- Facebook: [facebook.com/profile.php?id=100049110682203](https://www.facebook.com/profile.php?id=100049110682203)
 - Address: No.531, Lower Pazundaung Road, Yangon, 11211, Yangon, Myanmar/Burma

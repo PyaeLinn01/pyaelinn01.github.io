@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/profile.jpg"
+  avatar           : "images/progile.jpg"
   name             : "Pyae Linn"
   pronouns         : # example: "she/her"  
   bio              : "CS student passionate about AI; projects in CV, NLP, and ML."

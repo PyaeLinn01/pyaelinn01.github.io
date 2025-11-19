@@ -11,4 +11,4 @@ title: "Work Experience"
 - 07/06/2025 - Current
 - NLP/AI Research
 - myFoodQA: A Multimodal Dataset for Evaluating Cultural and Visual Reasoning in Myanmar Gastronomy accepted in the 7th Workshop on IINAE 2025 co-located with iSAI-NLP 2025
-  - Link: https://www.linkedin.com/company/lu-lab-my/
+  - Link: [linkedin.com/company/lu-lab-my](https://www.linkedin.com/company/lu-lab-my/)
