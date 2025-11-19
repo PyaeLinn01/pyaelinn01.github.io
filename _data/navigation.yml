@@ -11,13 +11,10 @@ main:
 
   - title: "Experience"
     url: /experience/
-    
+
   - title: "Projects"
     url: /projects/
     
-
-  - title: "Publications"
-    url: /publications/
 
   #- title: "Talks"
    # url: /talks/    
@@ -28,22 +25,20 @@ main:
   - #title: "About me"
     #url: /
 
-
-
-
   - title: "Publications"
     url: /publications/
 
   - title: "Skills"
     url: /skills/
+
   - title: "Awards"
     url: /awards/
 
   - title: "Blog Posts"
     url: /year-archive/
     
-  - title: "GitHub"
-    url: https://github.com/PyaeLinn01
+  #- title: "GitHub"
+   # url: https://github.com/PyaeLinn01
     
-  - title: "Guide"
-    url: /markdown/
+  #- title: "Guide"
+   # url: /markdown/
