@@ -22,11 +22,5 @@ Phone companies တွေ သူတို့ Model ကို ထပ်ထပ် 
 အဲ့တာကြောင့် data အသစ်တွေ ထပ် collect လုပ် label အသစ်တွေထပ်တပ် Model ကိုပြန် train  Code အနေနဲ့ implementation တွေပြန်လုပ် ပြန် Deployment တွေလုပ်ရပါတယ်
 ဒီ အခြေခံ  concept ကတော့ သိထားသင့်တဲ့အရာမလို့ ကိုယ့်ဘာသာလည်း note သဘောမျိုးနဲ့ မှတ်ထားချင်လို့ ရေးလိုက်ရခြင်းဖြစ်ပါတယ်
 
-Headings are cool
-======
+---
 
-You can have many headings
-======
-
-Aren't headings cool?
-------
