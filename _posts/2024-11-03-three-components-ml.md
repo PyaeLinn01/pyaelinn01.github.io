@@ -1,7 +1,7 @@
 ---
 title: 'Three Basic Components of Machine Learning Applications'
 date: 2024-11-03
-permalink: /posts/2024-11-03-three-components-ml.md/
+permalink: /posts/2024-11-03-three-components-ml/
 tags:
   - cool posts
   - category1
