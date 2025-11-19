@@ -5,21 +5,29 @@ title: "Projects"
 
 <style>
 .pinned-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-.pin-card { border: 1px solid #1f2937; border-radius: 12px; padding: 14px; background: #0d1117; color: #e5e7eb; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02); min-height: 150px; display: flex; flex-direction: column; }
+.pin-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; background: #ffffff; color: #1f2933; box-shadow: 0 4px 16px rgba(15,23,42,0.08); min-height: 150px; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
+.pin-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15,23,42,0.12); }
 .pin-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .pin-title { display: flex; gap: 8px; align-items: center; }
-.pin-title a { color: #58a6ff; font-weight: 600; text-decoration: none; }
+.pin-title a { color: #0366d6; font-weight: 600; text-decoration: none; }
 .pin-title a:hover { text-decoration: underline; }
-.badge { border: 1px solid rgba(229,231,235,0.2); border-radius: 999px; padding: 1px 8px; font-size: 12px; color: #9ca3af; }
-.pin-desc { flex: 1; font-size: 14px; color: #9ca3af; margin-bottom: 12px; }
-.pin-meta { display: flex; gap: 14px; font-size: 12px; color: #9ca3af; }
-.lang-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; background: #9ca3af; }
+.badge { border: 1px solid rgba(15,23,42,0.12); border-radius: 999px; padding: 1px 8px; font-size: 12px; color: #475569; background: #f8fafc; }
+.pin-desc { flex: 1; font-size: 14px; color: #475569; margin-bottom: 12px; }
+.pin-meta { display: flex; gap: 14px; font-size: 12px; color: #94a3b8; }
+.lang-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 6px; background: #0ea5e9; }
 @media (prefers-color-scheme: light) {
-  .pin-card { background: #fff; color: #111827; border-color: #e5e7eb; }
-  .pin-title a { color: #0366d6; }
-  .badge { color: #6b7280; border-color: #d1d5db; }
-  .pin-desc { color: #4b5563; }
-  .pin-meta { color: #6b7280; }
+  .pin-card { background: #ffffff; color: #111827; border-color: #e2e8f0; box-shadow: 0 4px 16px rgba(15,23,42,0.08); }
+  .badge { color: #475569; border-color: #cbd5f5; }
+  .pin-desc { color: #475569; }
+  .pin-meta { color: #94a3b8; }
+}
+@media (prefers-color-scheme: dark) {
+  .pin-card { background: #0f172a; border-color: #1f2937; color: #e5e7eb; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05); }
+  .pin-title a { color: #58a6ff; }
+  .badge { background: rgba(148,163,184,0.15); color: #cbd5f5; border-color: rgba(148,163,184,0.35); }
+  .pin-desc { color: #cbd5f5; }
+  .pin-meta { color: #94a3b8; }
+  .lang-dot { background: #93c5fd; }
 }
 </style>
 
@@ -70,4 +78,4 @@ title: "Projects"
     }
   });
 </script>
-<\/script>
+
