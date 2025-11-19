@@ -23,9 +23,6 @@ main:
   - title: "Blog Posts"
     url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
-    
   # - title: "CV"
   #   url: /cv-json/
   
@@ -46,6 +43,9 @@ main:
 
   - title: "Awards"
     url: /awards/
+
+  - title: "GitHub"
+    url: https://github.com/PyaeLinn01
     
   - title: "Guide"
     url: /markdown/
