@@ -28,6 +28,24 @@ main:
     
   # - title: "CV"
   #   url: /cv-json/
+  
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Experience"
+    url: /experience/
+
+  - title: "Skills"
+    url: /skills/
+
+  - title: "Education"
+    url: /education/
+
+  - title: "Volunteering"
+    url: /volunteering/
+
+  - title: "Awards"
+    url: /awards/
     
   - title: "Guide"
     url: /markdown/
