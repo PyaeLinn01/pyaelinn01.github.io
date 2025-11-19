@@ -10,15 +10,46 @@ Below are my pinned GitHub repositories.
   {% assign parts = repo | split: '/' %}
   {% assign owner = parts[0] %}
   {% assign name = parts[1] %}
-  <a class="project-card" href="https://github.com/{{ repo }}" target="_blank" rel="noopener">
-    <div class="project-card__title">{{ name }}</div>
-    <div class="project-card__meta">
-      <img alt="stars" src="https://img.shields.io/github/stars/{{ repo }}?style=social" />
-      <img alt="issues" src="https://img.shields.io/github/issues/{{ repo }}?color=blue" />
+  <a class="project-card" href="https://github.com/{{ repo }}" target="_blank" rel="noopener" data-repo="{{ repo }}">
+    <div class="project-card__header">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" class="octicon">
+        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h7A2.5 2.5 0 0 1 14 2.5v11a.5.5 0 0 1-.757.429L8 10.101l-5.243 3.828A.5.5 0 0 1 2 13.5z"></path>
+      </svg>
+      <span class="project-card__name">{{ owner }}/<strong>{{ name }}</strong></span>
+    </div>
+    <div class="project-card__desc" data-desc>Loading description…</div>
+    <div class="project-card__meta" data-meta>
+      <span class="meta-item" data-language></span>
+      <span class="meta-item" title="Stars" data-stars>★ --</span>
+      <span class="meta-item" title="Forks" data-forks>⑂ --</span>
     </div>
   </a>
 {% endfor %}
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const cards = document.querySelectorAll('.project-card');
+    for (const card of cards) {
+      const repo = card.getAttribute('data-repo');
+      try {
+        const res = await fetch(`https://api.github.com/repos/${repo}`);
+        if (!res.ok) continue;
+        const data = await res.json();
+        const desc = card.querySelector('[data-desc]');
+        const lang = card.querySelector('[data-language]');
+        const stars = card.querySelector('[data-stars]');
+        const forks = card.querySelector('[data-forks]');
+        if (desc) desc.textContent = data.description || 'No description provided.';
+        if (lang && data.language) lang.textContent = data.language;
+        if (stars) stars.textContent = `★ ${data.stargazers_count}`;
+        if (forks) forks.textContent = `⑂ ${data.forks_count}`;
+      } catch (e) {
+        // ignore
+      }
+    }
+  });
+<\/script>
 - App: [facecare.streamlit.app](https://facecare.streamlit.app)
 
 ### Text to Image Generator
