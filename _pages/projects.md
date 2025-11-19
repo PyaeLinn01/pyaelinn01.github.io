@@ -5,48 +5,68 @@ title: "Projects"
 
 Below are my pinned GitHub repositories.
 
-<div class="project-grid">
-{% for repo in site.data.pinned.repos %}
-  {% assign parts = repo | split: '/' %}
-  {% assign owner = parts[0] %}
-  {% assign name = parts[1] %}
-  <a class="project-card" href="https://github.com/{{ repo }}" target="_blank" rel="noopener" data-repo="{{ repo }}">
-    <div class="project-card__header">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" class="octicon">
-        <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h7A2.5 2.5 0 0 1 14 2.5v11a.5.5 0 0 1-.757.429L8 10.101l-5.243 3.828A.5.5 0 0 1 2 13.5z"></path>
-      </svg>
-      <span class="project-card__name">{{ owner }}/<strong>{{ name }}</strong></span>
-    </div>
-    <div class="project-card__desc" data-desc>Loading description…</div>
-    <div class="project-card__meta" data-meta>
-      <span class="meta-item" data-language></span>
-      <span class="meta-item" title="Stars" data-stars>★ --</span>
-      <span class="meta-item" title="Forks" data-forks>⑂ --</span>
-    </div>
-  </a>
-{% endfor %}
-</div>
+<style>
+.proj-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.proj-table th, .proj-table td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+.proj-table th { text-align: left; font-weight: 600; color: #374151; }
+.proj-repo { font-weight: 600; color: #0366d6; text-decoration: none; }
+.proj-repo:hover { text-decoration: underline; }
+.proj-desc { color: #6b7280; font-size: 0.95em; }
+.proj-meta { color: #6b7280; font-size: 0.9em; display: flex; gap: 10px; align-items: center; }
+.lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; background: #9ca3af; }
+@media (max-width: 720px) {
+  .hide-sm { display: none; }
+}
+</style>
+
+<table class="proj-table">
+  <thead>
+    <tr>
+      <th>Repository</th>
+      <th>Description</th>
+      <th class="hide-sm">Language</th>
+      <th>Stars</th>
+      <th class="hide-sm">Forks</th>
+      <th class="hide-sm">Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for repo in site.data.pinned.repos %}
+    {% assign parts = repo | split: '/' %}
+    {% assign owner = parts[0] %}
+    {% assign name = parts[1] %}
+    <tr data-repo="{{ repo }}">
+      <td><a class="proj-repo" href="https://github.com/{{ repo }}" target="_blank" rel="noopener">{{ owner }}/<strong>{{ name }}</strong></a></td>
+      <td class="proj-desc" data-desc>Loading description…</td>
+      <td class="hide-sm" data-language></td>
+      <td data-stars>--</td>
+      <td class="hide-sm" data-forks>--</td>
+      <td class="hide-sm" data-updated>--</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
 
 <script>
   document.addEventListener('DOMContentLoaded', async () => {
-    const cards = document.querySelectorAll('.project-card');
-    for (const card of cards) {
-      const repo = card.getAttribute('data-repo');
+    const rows = document.querySelectorAll('tr[data-repo]');
+    for (const row of rows) {
+      const repo = row.getAttribute('data-repo');
       try {
         const res = await fetch(`https://api.github.com/repos/${repo}`);
         if (!res.ok) continue;
-        const data = await res.json();
-        const desc = card.querySelector('[data-desc]');
-        const lang = card.querySelector('[data-language]');
-        const stars = card.querySelector('[data-stars]');
-        const forks = card.querySelector('[data-forks]');
-        if (desc) desc.textContent = data.description || 'No description provided.';
-        if (lang && data.language) lang.textContent = data.language;
-        if (stars) stars.textContent = `★ ${data.stargazers_count}`;
-        if (forks) forks.textContent = `⑂ ${data.forks_count}`;
-      } catch (e) {
-        // ignore
-      }
+        const d = await res.json();
+        const desc = row.querySelector('[data-desc]');
+        const lang = row.querySelector('[data-language]');
+        const stars = row.querySelector('[data-stars]');
+        const forks = row.querySelector('[data-forks]');
+        const updated = row.querySelector('[data-updated]');
+        if (desc) desc.textContent = d.description || 'No description provided.';
+        if (lang && d.language) lang.textContent = d.language;
+        if (stars) stars.textContent = `★ ${d.stargazers_count}`;
+        if (forks) forks.textContent = `⑂ ${d.forks_count}`;
+        if (updated && d.updated_at) updated.textContent = new Date(d.updated_at).toLocaleDateString();
+      } catch (_) {}
     }
   });
 <\/script>
