@@ -12,6 +12,11 @@ I am a Computer Science student with a strong foundation in core CS principles a
 
 In addition to AI, I have experience with Java, PHP, Python, C++, and JavaScript, plus database management, web development, software engineering, and algorithms. I’m eager to contribute to innovative AI projects and continue advancing my expertise.
 
+## Education & Training
+- Education | University of Information Technology | Yangon, Myanmar/Burma
+- Foundation of Generative AI | UDACITY | California, United States
+- Certificate in Computer and Data Science | MIT - Massachusetts Institute of Technology | Cambridge, United States
+
 ## Contact
 - Name: Pyae Linn
 - Date of birth: 20/11/2003

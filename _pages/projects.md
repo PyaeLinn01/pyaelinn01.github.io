@@ -3,19 +3,22 @@ permalink: /projects/
 title: "Projects"
 ---
 
-### ReliefBuddy: AI Mental Support Chatbot
-- A chatbot application providing empathetic support for anxiety and mental health using NLP.
-- Repo: [github.com/PyaeLinn01/ReliefBuddy-AI_Mental_Support_Chatbot](https://github.com/PyaeLinn01/ReliefBuddy-AI_Mental_Support_Chatbot)
-- App: [reliefbuddy.streamlit.app](https://reliefbuddy.streamlit.app)
+Below are my pinned GitHub repositories.
 
-### Fruit Freshness Detector
-- Predicts level of ripeness of fruits and recommends whether to eat.
-- Repo: [github.com/PyaeLinn01/fruit-freshness-detector](https://github.com/PyaeLinn01/fruit-freshness-detector)
-- App: [fresh-or-not.streamlit.app](https://fresh-or-not.streamlit.app)
-
-### FaceCare (Skin Condition Detection and Skincare Advice)
-- Streamlit app using a YOLO model to detect skin conditions and provide tailored advice and tips.
-- Repo: [github.com/PyaeLinn01/Face-Care](https://github.com/PyaeLinn01/Face-Care)
+<div class="project-grid">
+{% for repo in site.data.pinned.repos %}
+  {% assign parts = repo | split: '/' %}
+  {% assign owner = parts[0] %}
+  {% assign name = parts[1] %}
+  <a class="project-card" href="https://github.com/{{ repo }}" target="_blank" rel="noopener">
+    <div class="project-card__title">{{ name }}</div>
+    <div class="project-card__meta">
+      <img alt="stars" src="https://img.shields.io/github/stars/{{ repo }}?style=social" />
+      <img alt="issues" src="https://img.shields.io/github/issues/{{ repo }}?color=blue" />
+    </div>
+  </a>
+{% endfor %}
+</div>
 - App: [facecare.streamlit.app](https://facecare.streamlit.app)
 
 ### Text to Image Generator

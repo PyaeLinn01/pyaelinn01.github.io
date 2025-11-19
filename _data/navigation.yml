@@ -17,33 +17,26 @@ main:
   - title: "Teaching"
     url: /teaching/    
     
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-  
-  - title: "Projects"
-    url: /projects/
+  - title: "About me"
+    url: /
 
   - title: "Experience"
     url: /experience/
 
+  - title: "Projects"
+    url: /projects/
+
+  - title: "Publications"
+    url: /publications/
+
   - title: "Skills"
     url: /skills/
-
-  - title: "Education"
-    url: /education/
-
-  - title: "Volunteering"
-    url: /volunteering/
-
   - title: "Awards"
     url: /awards/
 
+  - title: "Blog Posts"
+    url: /year-archive/
+    
   - title: "GitHub"
     url: https://github.com/PyaeLinn01
     
