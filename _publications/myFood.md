@@ -1,7 +1,7 @@
 ---
 title: "myFoodQA: A Multimodal Dataset for Evaluating Cultural and Visual Reasoning in Myanmar Gastronomy"
 collection: publications
-category: manuscripts
+category: conferences
 permalink: /publication/myfoodqa
 excerpt: >-
   Accepted FULL paper introducing myFoodQA, a multimodal benchmark that measures
@@ -10,7 +10,7 @@ date: 2025-11-01
 venue: "7th Workshop on Innovation Initiatives in NLP/AI/Education (IINAE 2025), iSAI-NLP 2025"
 paper_id: 253
 paper_type: "FULL paper"
-paperurl: "https://www.linkedin.com/company/lu-lab-my/"
+paperurl: "paper/2025395591.pdf"
 slidesurl:
 bibtexurl:
 citation: 'Pyae Linn et al. (2025). "myFoodQA: A Multimodal Dataset for Evaluating Cultural and Visual Reasoning in Myanmar Gastronomy." <i>IINAE 2025 @ iSAI-NLP 2025</i>. FULL paper #253.'
