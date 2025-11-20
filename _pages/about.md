@@ -49,9 +49,9 @@ redirect_from:
   </div>
   <div style="grid-column: 1 / -1" class="muted">
     I am a Computer Science student with a strong foundation in core CS principles and a deep passion for Artificial Intelligence. 
-    
+    <br>
     I have hands-on experience in multiple AI projects, including a Fruit Freshness Detection system (Samsung Innovation Campus AI Hackathon 2024 Winner Project), a Mental Support Chatbot, a Skin Condition Detection system with personalized skincare advice, and an AI-powered warehouse management system for sales prediction and faulty product detection (Code2Career Hackathon 2024 Winner Project). 
-    
+    <br></br>
     In addition to AI, I work with Java, PHP, Python, C++, JavaScript, databases, and software engineering.
   </div>
 </div>
