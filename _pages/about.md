@@ -43,6 +43,7 @@ redirect_from:
       <a class="badge" href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>
       <a class="badge" href="{{ site.author.uri }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a>
       <a class="badge" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      <a class="badge" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a class="badge" href="https://www.facebook.com/profile.php?id=100049110682203" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
     </div>
   </div>
@@ -72,12 +73,12 @@ redirect_from:
 <div class="section">
   <h2>Contact</h2>
   <div class="badges">
-    <span class="badge"><i class="fas fa-birthday-cake"></i> DOB: 20/11/2003</span>
     <span class="badge"><i class="fas fa-flag"></i> Burmese (Myanmar)</span>
     <a class="badge" href="tel:+959420053538"><i class="fas fa-phone"></i> (+95) 9420053538</a>
     <span class="badge"><i class="fab fa-viber"></i> 09420053538</span>
     <a class="badge" href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> {{ site.author.email }}</a>
     <a class="badge" href="{{ site.author.uri }}" target="_blank" rel="noopener"><i class="fas fa-globe"></i> {{ site.author.uri | replace: 'https://','' }}</a>
+    <a class="badge" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
     <a class="badge" href="https://www.facebook.com/profile.php?id=100049110682203" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> facebook.com/…</a>
     <span class="badge"><i class="fas fa-map-marker-alt"></i> No.531, Lower Pazundaung Rd, Yangon</span>
   </div>
