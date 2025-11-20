@@ -4,9 +4,12 @@ title: "Projects"
 ---
 
 <style>
-.pinned-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-.pin-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 14px; background: #ffffff; color: #1f2933; box-shadow: 0 4px 16px rgba(15,23,42,0.08); min-height: 150px; display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
-.pin-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15,23,42,0.12); }
+.pinned-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.pin-card { position: relative; border: 1px solid rgba(148,163,184,.35); border-radius: 16px; padding: 18px; background: linear-gradient(145deg,#ffffff,#f8fafc); color: #1f2933; box-shadow: 0 10px 30px rgba(15,23,42,0.12); min-height: 150px; display: flex; flex-direction: column; gap: 10px; transition: transform .2s ease, box-shadow .2s ease; overflow: hidden; }
+.pin-card:after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(59,130,246,.15), transparent 40%); opacity: 0; transition: opacity .2s ease; }
+.pin-card:hover { transform: translateY(-6px); box-shadow: 0 25px 45px rgba(15,23,42,0.18); }
+.pin-card:hover:after { opacity: 1; }
+.pin-card > * { position: relative; z-index: 1; }
 .pin-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .pin-title { display: flex; gap: 8px; align-items: center; }
 .pin-title a { color: #0366d6; font-weight: 600; text-decoration: none; }

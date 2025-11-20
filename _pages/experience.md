@@ -41,9 +41,9 @@ title: "Work Experience"
             <span><i class="fas fa-location-dot"></i> Yangon, Myanmar</span>
           </div>
           <ul class="xp-list">
-            <li>Building OCR workflows that automate document intake for financial partners.</li>
-            <li>Shipping computer vision services to monitor product quality in real time.</li>
-            <li>Owning NLP pipelines that power multilingual support chatbots.</li>
+            <li>Building OCR Model for Myanmar Handwritten Language.</li>
+            <li>Develop Agentic AI systems for financial document processing workflows.</li>
+            <li>Owning NLP pipelines that power multilingual support chatbots for financial services.</li>
           </ul>
           <ul class="xp-tags">
             <li class="xp-tag">OCR</li>

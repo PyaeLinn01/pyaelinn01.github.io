@@ -11,26 +11,43 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
+<style>
+.pub-feed { margin-top: 18px; }
+.pub-feed .list__item { margin-bottom: 18px; }
+.pub-feed .archive__item { position: relative; border: 1px solid rgba(148,163,184,.35); border-radius: 18px; padding: 18px 22px; background: linear-gradient(140deg,#ffffff,#f8fafc); box-shadow: 0 12px 35px rgba(15,23,42,0.12); transition: transform .25s ease, box-shadow .25s ease; overflow: hidden; }
+.pub-feed .archive__item:after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(37,99,235,.15), transparent 45%); opacity: 0; transition: opacity .25s ease; }
+.pub-feed .archive__item > * { position: relative; z-index: 1; }
+.pub-feed .archive__item:hover { transform: translateY(-6px); box-shadow: 0 28px 55px rgba(15,23,42,0.18); }
+.pub-feed .archive__item:hover:after { opacity: 1; }
+.pub-feed .archive__item-title a { color: #1d4ed8; text-decoration: none; }
+.pub-feed .archive__item-title a:hover { text-decoration: underline; }
+.pub-feed .page__date { color: #64748b; }
+.pub-feed p a { color: #2563eb; text-decoration: none; border-bottom: 1px dotted rgba(37,99,235,.4); }
+.pub-feed p a:hover { color: #1d4ed8; }
+</style>
+
+<div class="pub-feed">
+  <!-- New style rendering if publication categories are defined -->
+  {% if site.publication_category %}
+    {% for category in site.publication_category  %}
+      {% assign title_shown = false %}
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}
+          {% continue %}
+        {% endif %}
+        {% unless title_shown %}
+          <h2>{{ category[1].title }}</h2><hr />
+          {% assign title_shown = true %}
+        {% endunless %}
+        {% include archive-single.html %}
+      {% endfor %}
+    {% endfor %}
+  {% else %}
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
       {% include archive-single.html %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% endif %}
+</div>
 
 
 
