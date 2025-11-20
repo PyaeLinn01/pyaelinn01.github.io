@@ -56,6 +56,8 @@ If you are running on Linux it may be necessary to install some additional depen
 
 ## Using Docker
 
+docker run --rm -it -p 4000:4000 -v "$PWD":/srv/jekyll -w /srv/jekyll jekyll/jekyll:4 jekyll serve -l -H 0.0.0.0
+
 Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
 
 You can build and execute the container by running the following command in the repository:
