@@ -10,7 +10,7 @@ date: 2025-11-01
 venue: "7th Workshop on Innovation Initiatives in NLP/AI/Education (IINAE 2025), iSAI-NLP 2025"
 paper_id: 253
 paper_type: "FULL paper"
-paperurl: "/paper/2025395591.pdf"
+paperurl: "https://ieeexplore.ieee.org/document/11320506"
 slidesurl:
 bibtexurl:
 citation: 'Pyae Linn et al. (2025). "myFoodQA: A Multimodal Dataset for Evaluating Cultural and Visual Reasoning in Myanmar Gastronomy." <i>IINAE 2025 @ iSAI-NLP 2025</i>. FULL paper #253.'
