@@ -4,23 +4,24 @@ title: "Work Experience"
 ---
 
 <style>
+/* ===== EXPERIENCE PAGE - DARK MODE COMPATIBLE ===== */
 .xp-wrapper { margin-top: 10px; display: grid; gap: 28px; }
-.xp-section { border: 1px solid #e5e7eb; border-radius: 18px; padding: 24px; background: linear-gradient(135deg,#ffffff 0%,#f8fafc 100%); box-shadow: 0 20px 60px rgba(15,23,42,0.1); }
-.xp-section h2 { margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px; }
-.xp-section h2 i { color: #2563eb; }
+.xp-section { border: 1px solid var(--global-border-color); border-radius: 18px; padding: 24px; background: var(--global-bg-color); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+.xp-section h2 { margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px; color: var(--global-text-color); }
+.xp-section h2 i { color: #6366f1; }
 .xp-timeline { position: relative; margin-top: 18px; padding-left: 26px; }
-.xp-timeline:before { content: ""; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 2px; background: linear-gradient(180deg,#2563eb,#60a5fa); border-radius: 999px; }
+.xp-timeline:before { content: ""; position: absolute; left: 8px; top: 4px; bottom: 4px; width: 2px; background: linear-gradient(180deg,#6366f1,#8b5cf6); border-radius: 999px; }
 .xp-item { position: relative; padding: 0 0 20px 18px; }
 .xp-item:last-child { padding-bottom: 0; }
-.xp-dot { position: absolute; left: -2px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #2563eb; box-shadow: 0 0 0 4px #dbeafe; }
-.xp-card { border: 1px solid #e2e8f0; border-radius: 14px; padding: 18px; background: #ffffff; transition: transform .2s ease, box-shadow .2s ease; }
-.xp-card:hover { transform: translateY(-4px); box-shadow: 0 20px 35px rgba(15,23,42,0.15); }
-.xp-role { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
-.xp-meta { color: #64748b; font-size: 14px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 12px; }
+.xp-dot { position: absolute; left: -2px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: #6366f1; box-shadow: 0 0 0 4px rgba(99,102,241,0.25); }
+.xp-card { border: 1px solid var(--global-border-color); border-radius: 14px; padding: 18px; background: var(--global-bg-color); transition: transform .2s ease, box-shadow .2s ease; }
+.xp-card:hover { transform: translateY(-4px); box-shadow: 0 20px 35px rgba(0,0,0,0.15); border-color: #6366f1; }
+.xp-role { font-size: 18px; font-weight: 600; margin: 0 0 4px; color: var(--global-text-color); }
+.xp-meta { color: var(--global-text-color-light); font-size: 14px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 12px; }
 .xp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.xp-tag { padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; background: #eef2ff; color: #4338ca; }
-.xp-list { margin: 0; padding-left: 18px; color: #1f2937; }
-.xp-list a { color: #2563eb; font-weight: 600; }
+.xp-tag { padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; background: rgba(99,102,241,0.15); color: #818cf8; }
+.xp-list { margin: 0; padding-left: 18px; color: var(--global-text-color); }
+.xp-list a { color: #818cf8; font-weight: 600; }
 @media (max-width: 640px) {
   .xp-section { padding: 18px; }
   .xp-timeline { padding-left: 18px; }

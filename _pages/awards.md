@@ -4,22 +4,23 @@ title: "Honours & Awards"
 ---
 
 <style>
+/* ===== AWARDS PAGE - DARK MODE COMPATIBLE ===== */
 .awds-wrapper { margin-top: 16px; display: grid; gap: 30px; }
-.awds-card { position: relative; border: 1px solid #e2e8f0; border-radius: 18px; padding: 24px; background: linear-gradient(120deg,#ffffff,#f9fafb); box-shadow: 0 18px 55px rgba(15,23,42,0.12); transition: transform .25s ease, box-shadow .25s ease; overflow: hidden; }
-.awds-card:after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(59,130,246,.18), transparent 45%); opacity: 0; transition: opacity .3s ease; }
+.awds-card { position: relative; border: 1px solid var(--global-border-color); border-radius: 18px; padding: 24px; background: var(--global-bg-color); box-shadow: 0 18px 55px rgba(0,0,0,0.12); transition: transform .25s ease, box-shadow .25s ease; overflow: hidden; }
+.awds-card:after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(99,102,241,.15), transparent 45%); opacity: 0; transition: opacity .3s ease; }
 .awds-card > * { position: relative; z-index: 1; }
-.awds-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(15,23,42,0.18); }
+.awds-card:hover { transform: translateY(-6px); box-shadow: 0 30px 70px rgba(0,0,0,0.2); border-color: #6366f1; }
 .awds-card:hover:after { opacity: 1; }
 .awds-header { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
-.awds-title { font-size: 18px; font-weight: 700; margin: 0; color: #0f172a; }
-.awds-badge { padding: 6px 14px; border-radius: 999px; background: #ecfdf5; color: #047857; font-size: 13px; font-weight: 600; }
-.awds-meta { margin-top: 6px; color: #6b7280; font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
-.awds-body { margin-top: 14px; color: #1f2937; line-height: 1.6; }
+.awds-title { font-size: 18px; font-weight: 700; margin: 0; color: var(--global-text-color); }
+.awds-badge { padding: 6px 14px; border-radius: 999px; background: rgba(16,185,129,0.15); color: #34d399; font-size: 13px; font-weight: 600; }
+.awds-meta { margin-top: 6px; color: var(--global-text-color-light); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+.awds-body { margin-top: 14px; color: var(--global-text-color); line-height: 1.6; }
 .awds-links { margin-top: 12px; }
-.awds-links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: #2563eb; color: #fff; font-size: 13px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; box-shadow: 0 6px 15px rgba(37,99,235,0.35); }
-.awds-links a:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 12px 25px rgba(37,99,235,0.45); }
-.awds-timeline { border-top: 1px dashed #e5e7eb; margin-top: 18px; padding-top: 18px; display: grid; gap: 12px; }
-.awds-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: #eef2ff; color: #4338ca; text-transform: uppercase; letter-spacing: .05em; }
+.awds-links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: linear-gradient(135deg,#6366f1,#8b5cf6); color: #fff; font-size: 13px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; box-shadow: 0 6px 15px rgba(99,102,241,0.35); }
+.awds-links a:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(99,102,241,0.45); }
+.awds-timeline { border-top: 1px dashed var(--global-border-color); margin-top: 18px; padding-top: 18px; display: flex; flex-wrap: wrap; gap: 12px; }
+.awds-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: rgba(99,102,241,0.15); color: #818cf8; text-transform: uppercase; letter-spacing: .05em; }
 @media (max-width: 640px) {
   .awds-card { padding: 18px; }
   .awds-header { flex-direction: column; align-items: flex-start; }
