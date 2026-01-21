@@ -572,8 +572,5 @@ redirect_from:
         <span class="contact-value">Pyae Linn</span>
       </div>
     </a>
-    <div class="contact-item">
-      </div>
-    </div>
   </div>
 </div>
