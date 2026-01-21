@@ -462,7 +462,6 @@ redirect_from:
       <img class="avatar-img" src="{{ avatar_url }}" alt="{{ site.author.name }}" />
       <div class="status-badge" title="Available for opportunities"></div>
     </div>
-    
     <!-- Hero Content -->
     <div class="hero-content">
       <h1 class="hero-name">{{ site.author.name }}</h1>
@@ -476,7 +475,6 @@ redirect_from:
       <span class="hero-location">
         <i class="fas fa-map-marker-alt"></i> Yangon, Myanmar
       </span>
-      
       <!-- Social Links -->
       <div class="social-links">
         <a class="social-btn email" href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>
@@ -499,7 +497,6 @@ redirect_from:
     <p class="bio-text">
       Beyond AI, I work with Java, PHP, Python, C++, JavaScript, databases, and software engineering.
     </p>
-    
     <!-- Achievement Chips -->
     <div class="achievements">
       <span class="achievement-chip"><i class="fas fa-trophy"></i> Samsung AI Hackathon 2024 Winner</span>
@@ -520,10 +517,6 @@ redirect_from:
       <span class="edu-location"><i class="fas fa-map-pin"></i> Yangon, Myanmar</span>
     </div>
     <div class="edu-card">
-      <h3 class="edu-name">Foundation of Generative AI</h3>
-      <span class="edu-location"><i class="fas fa-map-pin"></i> Udacity · California, United States</span>
-    </div>
-    <div class="edu-card">
       <h3 class="edu-name">Certificate in Computer and Data Science</h3>
       <span class="edu-location"><i class="fas fa-map-pin"></i> MIT · Cambridge, United States</span>
     </div>
@@ -537,13 +530,6 @@ redirect_from:
     <h2 class="section-title">Get In Touch</h2>
   </div>
   <div class="contact-grid">
-    <div class="contact-item">
-      <div class="contact-icon"><i class="fas fa-flag"></i></div>
-      <div class="contact-info">
-        <span class="contact-label">Language</span>
-        <span class="contact-value">Burmese (Myanmar)</span>
-      </div>
-    </div>
     <a class="contact-item" href="tel:+959420053538">
       <div class="contact-icon"><i class="fas fa-phone"></i></div>
       <div class="contact-info">
@@ -587,10 +573,6 @@ redirect_from:
       </div>
     </a>
     <div class="contact-item">
-      <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-      <div class="contact-info">
-        <span class="contact-label">Address</span>
-        <span class="contact-value">No.531, Lower Pazundaung Rd, Yangon</span>
       </div>
     </div>
   </div>
