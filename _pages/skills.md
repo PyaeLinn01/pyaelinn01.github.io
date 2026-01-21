@@ -392,14 +392,14 @@ title: "Skills"
         </div>
       </div>
       <div class="skill-item">
-        <span class="skill-name"><span class="skill-dot"></span> PyROOT</span>
+        <span class="skill-name"><span class="skill-dot"></span> OpenCV</span>
         <div class="skill-level">
           <div class="level-bar"><div class="level-fill" style="width: 78%"></div></div>
           <span class="level-text">78%</span>
         </div>
       </div>
       <div class="skill-item">
-        <span class="skill-name"><span class="skill-dot"></span> RDataFrame</span>
+        <span class="skill-name"><span class="skill-dot"></span> Scikit-learn</span>
         <div class="skill-level">
           <div class="level-bar"><div class="level-fill" style="width: 75%"></div></div>
           <span class="level-text">75%</span>
