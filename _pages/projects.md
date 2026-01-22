@@ -1,6 +1,7 @@
----
 permalink: /projects/
 title: "Projects"
+---
+
 <style>
 /* ===== PROJECTS PAGE - MODERN, DARK-MODE AWARE ===== */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 8px; }
